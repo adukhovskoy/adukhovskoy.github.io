@@ -19,9 +19,9 @@
       </nav>
     </header>
     <main class="main-container">
-      <h1>SEDONA - Поиск отелей</h1>
+      <h1 class="visually-hidden">SEDONA - Поиск отелей</h1>
       <section class="hotels-search-options">
-        <h2>Параметры поиска</h2>
+        <h2 class="visually-hidden">Параметры поиска</h2>
         <section class="hotels-search-options-infrastructure">
           <h3>Инфраструктура</h3>
           <ul class="hotels-search-options-infrastructure-list">
@@ -44,54 +44,8 @@
         </section>
       </section>
       <section class="hotels-search-results">
-        <h2>Список найденных отелей</h2>
+        <h2 class="visually-hidden">Список найденных отелей</h2>
         <p>Найдено: 3</p>
-<!-- не уверен что стоит делать это таблицей, хотя тут пары "параметр-значение" что для таблиц вроде самое то, после таблицы в комменте другая реализация-->
-          <table class="hotels-search-results-table">
-            <tr class="hotels-search-results-item-parameternames">
-              <th class="visually-hidden">Фотография</th>
-              <th class="visually-hidden">Название</th>
-              <th class="visually-hidden">Тип жилья</th>
-              <th class="visually-hidden">Цена в сутки</th>
-              <th class="visually-hidden">Количество звёзд</th>
-              <th class="hotels-search-results-rate-title">Рейтинг</th>
-              <th class="visually-hidden">Подробнее</th>
-              <th class="visually-hidden">Забронировать</th>
-            </tr>
-            <tr class="hotels-search-results-item-parameters">
-              <td class="hotels-search-results-item-photo"><img src="img/amara_resort_spa.jpg" width="135" heigth="90" alt="Фото отеля Amara resort & SPA"></td>
-              <td class="hotels-search-results-item-name">Amara Resort & SPA</td>
-              <td class="hotels-search-results-item-hoteltype">Гостиница</td>
-              <td class="hotels-search-results-item-price">От 4000 р.</td>
-              <td class="hotels-search-results-item-stars">4</td>
-              <td class="hotels-search-results-item-rate">8.5</td>
-              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
-              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
-            </tr>
-            <tr class="hotels-search-results-item-parameters">
-              <td class="hotels-search-results-item-photo"><img src="img/desert_quail_inn.jpg" width="135" heigth="90" alt="Фото отеля Desert Quail INN"></td>
-              <td class="hotels-search-results-item-name">Desert Quail INN</td>
-              <td class="hotels-search-results-item-hoteltype">Мотель</td>
-              <td class="hotels-search-results-item-price">От 3000 р.</td>
-              <td class="hotels-search-results-item-stars">3</td>
-              <td class="hotels-search-results-item-rate">8.9</td>
-              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
-              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
-            </tr>
-            <tr class="hotels-search-results-item-parameters">
-              <td class="hotels-search-results-item-photo"><img src="img/villas_at_poco_diablo.jpg" width="135" heigth="90" alt="Фото отеля Villas At Poco Diablo"></td>
-              <td class="hotels-search-results-item-name">Villas At Poco Diablo</td>
-              <td class="hotels-search-results-item-hoteltype">Апартаменты</td>
-              <td class="hotels-search-results-item-price">От 2000 р.</td>
-              <td class="hotels-search-results-item-stars">2</td>
-              <td class="hotels-search-results-item-rate">9.2</td>
-              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
-              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
-            </tr>
-          </table>
-<!-- альтернативно можно сделать так, вместо таблицы:
-но поисковик не знает что значит цифра 4 в <p class="hotels-search-results-item-stars">4</p>
-читалка тоже не сможет понять что это за магическое число
           <ul class="hotels-search-results-list">
             <li class="hotels-search-results-item">
               <h3 class="hotels-search-results-item-name">Amara Resort & SPA</h3>
@@ -124,20 +78,16 @@
               <span class="button hotels-search-results-item-button-book-it">Забронировать</span>
             </li>
           </ul>
--->
-
-<!-- не уверен что сортировка это навигация и что стоит оборачивать её в nav-->
-<!-- не уверен что сортировку нужно помещать после сортируемого списка> -->
           <nav class="hotels-search-results-sorting">
             <h3>Сортировка</h3>
-            <ul class="hotels-search-results-sorting-type">
-              <li><span class="button hotels-search-results-sorting-button-by-price">По цене</span></li>
-              <li><span class="button hotels-search-results-sorting-button-by-hoteltype">По типу</span></li>
-              <li><span class="button hotels-search-results-sorting-button-by-rate">По рейтингу</span></li>
+            <ul class="hotels-search-results-sorting-type-list">
+              <li class="hotels-search-results-sorting-type-item"><a href="/hotels.html?sort_options">По цене</a></li>
+              <li class="hotels-search-results-sorting-type-item"><a href="/hotels.html?sort_options">По типу</a></li>
+              <li class="hotels-search-results-sorting-type-item"><a href="/hotels.html?sort_options">По рейтингу</a></li>
             </ul>
-            <ul class="hotels-search-results-sorting-direction">
-                <li><span class="button hotels-search-results-sorting-button-direction">По возрастанию</span></li>
-                <li><span class="button hotels-search-results-sorting-button-direction">По убыванию</span></li>
+            <ul class="hotels-search-results-sorting-direction-list">
+                <li class="hotels-search-results-sorting-direction-item"><a href="/hotels.html?sort_options">По возрастанию</a></li>
+                <li class="hotels-search-results-sorting-direction-item"><a href="/hotels.html?sort_options">По убыванию</a></li>
             </ul>
           </nav>
       </section>
@@ -151,7 +101,7 @@
           <li><a href="#">Sedona@youtube</a></li>
         </ul>
       </div>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="main-footer-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/done_by_htmlacademy.svg" width="230" height="120" alt="Разработано в HTML Academy">
       </a>
     </footer>
