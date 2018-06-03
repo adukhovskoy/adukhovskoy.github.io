@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>SEDONA - Hotels Search</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-header-navigation">
+          <a class="main-header-logo" href="index.html">
+            <img scr="img/main-logo.svg" width="140" height="70" alt="Логотип города Седона">
+          </a>
+        <ul class="site-navigation">
+          <li><a href="information.html">Информация</a></li>
+          <li><a href="photo_and_video.html">Фото и видео</a></li>
+          <li><a href="map_of_state.html">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1>SEDONA - Поиск отелей</h1>
+      <section class="hotels-search-options">
+        <h2>Параметры поиска</h2>
+        <section class="hotels-search-options-infrastructure">
+          <h3>Инфраструктура</h3>
+          <ul class="hotels-search-options-infrastructure-list">
+            <li class="hotels-search-options-infrastructure-item">Бассейн</li>
+            <li class="hotels-search-options-infrastructure-item">Парковка</li>
+            <li class="hotels-search-options-infrastructure-item">WiFi</li>
+          </ul>
+        </section>
+        <section class="hotels-search-options-hoteltype">
+        <h3>Тип жилья</h3>
+          <ul class="hotels-search-options-hoteltype-list">
+              <li class="hotels-search-options-hoteltype-item">Гостиница</li>
+              <li class="hotels-search-options-hoteltype-item">Аппартаменты</li>
+              <li class="hotels-search-options-hoteltype-item">Мотель</li>
+          </ul>
+        </section>
+        <section class="hotels-search-options-price">
+          <h3>Стоимость в сутки (Р):</h3>
+          <!-- Здесь будет форма -->
+        </section>
+      </section>
+      <section class="hotels-search-results">
+        <h2>Список найденных отелей</h2>
+        <p>Найдено: 3</p>
+<!-- не уверен что стоит делать это таблицей, хотя тут пары "параметр-значение" что для таблиц вроде самое то, после таблицы в комменте другая реализация-->
+          <table class="hotels-search-results-table">
+            <tr class="hotels-search-results-item-parameternames">
+              <th class="visually-hidden">Фотография</th>
+              <th class="visually-hidden">Название</th>
+              <th class="visually-hidden">Тип жилья</th>
+              <th class="visually-hidden">Цена в сутки</th>
+              <th class="visually-hidden">Количество звёзд</th>
+              <th class="hotels-search-results-rate-title">Рейтинг</th>
+              <th class="visually-hidden">Подробнее</th>
+              <th class="visually-hidden">Забронировать</th>
+            </tr>
+            <tr class="hotels-search-results-item-parameters">
+              <td class="hotels-search-results-item-photo"><img src="img/amara_resort_spa.jpg" width="135" heigth="90" alt="Фото отеля Amara resort & SPA"></td>
+              <td class="hotels-search-results-item-name">Amara Resort & SPA</td>
+              <td class="hotels-search-results-item-hoteltype">Гостиница</td>
+              <td class="hotels-search-results-item-price">От 4000 р.</td>
+              <td class="hotels-search-results-item-stars">4</td>
+              <td class="hotels-search-results-item-rate">8.5</td>
+              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
+              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
+            </tr>
+            <tr class="hotels-search-results-item-parameters">
+              <td class="hotels-search-results-item-photo"><img src="img/desert_quail_inn.jpg" width="135" heigth="90" alt="Фото отеля Desert Quail INN"></td>
+              <td class="hotels-search-results-item-name">Desert Quail INN</td>
+              <td class="hotels-search-results-item-hoteltype">Мотель</td>
+              <td class="hotels-search-results-item-price">От 3000 р.</td>
+              <td class="hotels-search-results-item-stars">3</td>
+              <td class="hotels-search-results-item-rate">8.9</td>
+              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
+              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
+            </tr>
+            <tr class="hotels-search-results-item-parameters">
+              <td class="hotels-search-results-item-photo"><img src="img/villas_at_poco_diablo.jpg" width="135" heigth="90" alt="Фото отеля Villas At Poco Diablo"></td>
+              <td class="hotels-search-results-item-name">Villas At Poco Diablo</td>
+              <td class="hotels-search-results-item-hoteltype">Апартаменты</td>
+              <td class="hotels-search-results-item-price">От 2000 р.</td>
+              <td class="hotels-search-results-item-stars">2</td>
+              <td class="hotels-search-results-item-rate">9.2</td>
+              <td class="hotels-search-results-item-info"><a href=#>Подробнее</a></td>
+              <td class="hotels-search-results-item-stars"><span class="button hotels-search-results-item-button-book-it">Забронировать</span></td>
+            </tr>
+          </table>
+<!-- альтернативно можно сделать так, вместо таблицы:
+но поисковик не знает что значит цифра 4 в <p class="hotels-search-results-item-stars">4</p>
+читалка тоже не сможет понять что это за магическое число
+          <ul class="hotels-search-results-list">
+            <li class="hotels-search-results-item">
+              <h3 class="hotels-search-results-item-name">Amara Resort & SPA</h3>
+              <img class="hotels-search-results-item-photo" src="img/amara_resort_spa.jpg" width="135" heigth="90" alt="Фото отеля Amara resort & SPA">
+              <p class="hotels-search-results-item-hoteltype">Гостиница</p>
+              <p class="hotels-search-results-item-price">От 4000 р.</p>
+              <p class="hotels-search-results-item-stars">4</p>
+              <p class="hotels-search-results-item-rate">Рейтинг: 8.5</p>
+              <a class="hotels-search-results-item-info" href=#>Подробнее</a>
+              <span class="button hotels-search-results-item-button-book-it">Забронировать</span>
+            </li>
+            <li class="hotels-search-results-item">
+              <h3 class="hotels-search-results-item-name">Desert Quail INN</h3>
+              <img class="hotels-search-results-item-photo" src="img/desert_quail_inn.jpg" width="135" heigth="90" alt="Фото отеля Desert Quail INN">
+              <p class="hotels-search-results-item-hoteltype">Мотель</p>
+              <p class="hotels-search-results-item-price">От 3000 р.</p>
+              <p class="hotels-search-results-item-stars">3</p>
+              <p class="hotels-search-results-item-rate">Рейтинг: 8.9</p>
+              <a class="hotels-search-results-item-info" href=#>Подробнее</a>
+              <span class="button hotels-search-results-item-button-book-it">Забронировать</span>
+            </li>
+            <li class="hotels-search-results-item">
+              <h3 class="hotels-search-results-item-name">Villas At Poco Diablo</h3>
+              <img class="hotels-search-results-item-photo" src="img/villas_at_poco_diablo.jpg" width="135" heigth="90" alt="Фото отеля Villas At Poco Diablo">
+              <p class="hotels-search-results-item-hoteltype">Апартаменты</p>
+              <p class="hotels-search-results-item-price">От 2000 р.</p>
+              <p class="hotels-search-results-item-stars">2</p>
+              <p class="hotels-search-results-item-rate">Рейтинг: 9.2</p>
+              <a class="hotels-search-results-item-info" href=#>Подробнее</a>
+              <span class="button hotels-search-results-item-button-book-it">Забронировать</span>
+            </li>
+          </ul>
+-->
+
+<!-- не уверен что сортировка это навигация и что стоит оборачивать её в nav-->
+<!-- не уверен что сортировку нужно помещать после сортируемого списка> -->
+          <nav class="hotels-search-results-sorting">
+            <h3>Сортировка</h3>
+            <ul class="hotels-search-results-sorting-type">
+              <li><span class="button hotels-search-results-sorting-button-by-price">По цене</span></li>
+              <li><span class="button hotels-search-results-sorting-button-by-hoteltype">По типу</span></li>
+              <li><span class="button hotels-search-results-sorting-button-by-rate">По рейтингу</span></li>
+            </ul>
+            <ul class="hotels-search-results-sorting-direction">
+                <li><span class="button hotels-search-results-sorting-button-direction">По возрастанию</span></li>
+                <li><span class="button hotels-search-results-sorting-button-direction">По убыванию</span></li>
+            </ul>
+          </nav>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <p class="main-footer-hashtag">#VISITSEDONA</p>
+      <div class="main-footer-social">
+        <ul>
+          <li><a href="#">Sedona@Twitter</a></li>
+          <li><a href="#">Sedona@facebook</a></li>
+          <li><a href="#">Sedona@youtube</a></li>
+        </ul>
+      </div>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/done_by_htmlacademy.svg" width="230" height="120" alt="Разработано в HTML Academy">
+      </a>
+    </footer>
+  </body>
+</html>

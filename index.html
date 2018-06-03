@@ -2,11 +2,101 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>SEDONA</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-header-navigation">
+          <a class="main-header-logo">
+            <img scr="img/main-logo.svg" width="140" height="70" alt="Логотип города Седона">
+          </a>
+        <ul class="site-navigation">
+          <li><a href="information.html">Информация</a></li>
+          <li><a href="photo_and_video.html">Фото и видео</a></li>
+          <li><a href="map_of_state.html">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1>SEDONA</h1>
+      <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <section class="features">
+        <h2 class="visually-hidden">Все преимущества городка Седона</h2>
+          <section class="features-vs-canyon">
+            <h3>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h3>
+            <ol class="features-vs-canyon-places-list">
+              <li class="features-vs-canyon-places-item">
+                <h4>Настоящий городок</h4>
+<!-- если в CSS нельзя или геморрно превратить номер 1. из ol в "- 1 -" то все ol -> ul и в каждом li явно добавить <p>- №1 -</p>
+-->
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <img src="img/real-city.svg" width="260" height="510" alt="Фото города Седона без туристов">
+              </li>
+              <li class="features-vs-canyon-places-item">
+                <h4>Там есть мост дьявола</h4>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <img src="img/devils-bridge.svg" width="260" height="510" alt="Фото моста дьявола">
+              </li>
+            </ol>
+            <ol class="features-vs-canyon-common-list" start="3">
+              <li class="features-vs-canyon-common-item">
+                <h4>Небольшая площадь</h4>
+                <p>Все достопримечательности находятся очень близко</p>
+              </li>
+              <li class="features-vs-canyon-common-item">
+                <h4>Красивая дорога</h4>
+                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </li>
+              <li class="features-vs-canyon-common-item">
+                <h4>Мало туристов</h4>
+                <p>Большинство едет в Гран-Каньон и толпится там</p>
+              </li>
+            </ol>
+          </section>
+          <section class="features-usual">
+            <h3 class="visually-hidden">Прочие преимущества Седоны</h3>
+            <ul class="features-usual-list">
+              <li>
+                <h4>Жильё</h4>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li>
+                <h4>Еда</h4>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <h4>Сувениры</h4>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </section>
+      </section>
+      <section class="hotel-search">
+          <h2>Заинтересовались?</h2>
+          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <span class="button button-call-search">Поиск гостиницы в Седоне</span>
+        </section>
+        <section class="main-map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+        </section>
+    </main>
+    <footer class="main-footer">
+      <p class="main-footer-hashtag">#VISITSEDONA</p>
+      <div class="main-footer-social">
+        <ul >
+          <li><a href="#">Sedona@Twitter</a></li>
+          <li><a href="#">Sedona@facebook</a></li>
+          <li><a href="#">Sedona@youtube</a></li>
+        </ul>
+      </div>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="img/done_by_htmlacademy.svg" width="230" height="120" alt="Разработано в HTML Academy">
+      </a>
+    </footer>
+    <section class="modal modal-">
+        <h2>Параметры поиска гостиницы в Седоне</h2>
+        <!-- Здесь будет форма -->
+    </section>
   </body>
 </html>
