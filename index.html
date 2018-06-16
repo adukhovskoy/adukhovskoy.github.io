@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>SEDONA</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -19,9 +22,8 @@
       </nav>
     </header>
     <main class="main-container">
-      <h1>SEDONA</h1>
-      <img src="img/Welcome.png" width="296" height="352" alt="Добро пожаловать в Седону, потому-что Гранд-Коньон - сосёт!">
-      <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <img src="img/Welcome.png" width="458" height="352" alt="Добро пожаловать в Седону, потому-что Гранд-Коньон - сосёт!">
+      <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
       <section class="features">
         <h2 class="visually-hidden">Все преимущества Седоны</h2>
         <section class="features-vs-canyon">
@@ -29,13 +31,13 @@
           <ul class="places-list">
             <li class="places-item">
               <h4>Настоящий городок</h4>
-              <p>- №1 -</p>
+              <p>— №1 —</p>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
               <img src="img/village.jpg" width="1600" height="800" alt="Фото города Седона без туристов">
             </li>
             <li class="places-item">
               <h4>Там есть мост дьявола</h4>
-              <p>- №2 -</p>
+              <p>— №2 —</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
               <img src="img/devils-bridge.jpg" width="1600" height="800" alt="Фото моста дьявола">
             </li>
@@ -43,17 +45,17 @@
           <ul class="common-list">
             <li class="common-item">
               <h4>Небольшая площадь</h4>
-              <p>- №3 -</p>
+              <p>— №3 —</p>
               <p>Все достопримечательности находятся очень близко</p>
             </li>
             <li class="common-item">
               <h4>Красивая дорога</h4>
-              <p>- №4 -</p>
+              <p>— №4 —</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="common-item">
               <h4>Мало туристов</h4>
-              <p>- №5 -</p>
+              <p>— №5 —</p>
               <p>Большинство едет в Гран-Каньон и толпится там</p>
             </li>
           </ul>
@@ -79,7 +81,7 @@
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button button-call-modal-hotel-search" href="quick-search.html">Поиск гостиницы в Седоне</a>
+        <a class="button brown-button button-call-modal-hotel-search" href="quick-search.html">Поиск гостиницы в Седоне</a>
       </section>
       <section class="main-map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -89,7 +91,7 @@
     <footer class="main-footer">
       <p class="main-footer-hashtag">#VISITSEDONA</p>
       <div class="main-footer-social">
-        <ul >
+        <ul class="social-list">
           <li><a href="#" target="_blank" rel="noopener"><img src="img/twitter.svg" width="17" height="15" alt="Твиттер"></a></li>
           <li><a href="#" target="_blank" rel="noopener"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a></li>
           <li><a href="#" target="_blank" rel="noopener"><img src="img/youtube.svg" width="20" height="16" alt="Ютуб"></a></li>
@@ -119,7 +121,7 @@
           <label for="children-count">Дети</label>
           <input class="children-count" type="number" name="children-count" id="children-count" min="0" value="0">
         </p>
-        <button class="button modal-hotel-search-button-submit" type="submit">Найти</button>
+        <button class="button blue-button modal-hotel-search-button-submit" type="submit">Найти</button>
       </form>
     </section>
   </body>
