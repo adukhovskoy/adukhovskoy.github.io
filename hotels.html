@@ -9,19 +9,23 @@
   </head>
   <body class="hotels-body">
     <header class="main-header">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/logo-sedona.png" width="138" height="70" alt="Основная страница сайта">
+      </a>
       <nav class="main-header-navigation">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/logo-sedona.png" width="138" height="70" alt="Основная страница сайта">
-        </a>
         <ul class="site-navigation">
-          <li class="site-navigation-item"><a href="information.html">Информация</a></li>
-          <li class="site-navigation-item"><a href="photo_and_video.html">Фото и видео</a></li>
-          <li class="site-navigation-item"><a href="map_of_state.html">Карта штата</a></li>
-          <li class="site-navigation-item active">
-            <a href="hotels.html">
-              <span class="visually-hidden">Текущий пункт:</span>Гостиницы
-            </a>
-          </li>
+          <div class="site-navigation-left">
+            <li class="site-navigation-item"><a href="information.html">Информация</a></li>
+            <li class="site-navigation-item"><a href="photo_and_video.html">Фото и видео</a></li>
+          </div>
+          <div class="site-navigation-right">
+            <li class="site-navigation-item"><a href="map_of_state.html">Карта штата</a></li>
+            <li class="site-navigation-item active">
+              <a href="hotels.html">
+                <span class="visually-hidden">Текущий пункт:</span>Гостиницы
+              </a>
+            </li>
+          </div>
         </ul>
       </nav>
     </header>
@@ -30,60 +34,68 @@
       <section class="search-filter">
         <h2 class="visually-hidden">Параметры поиска</h2>
         <form class="search-filter-form" action="https://echo.htmlacademy.ru/" method="post" oninput="min_price_value.value=parseInt(min_price.value),max_price_value.value=parseInt(max_price.value)">
-          <fieldset class="search-filter-infrastructure">
-            <legend>Инфраструктура:</legend>
-            <ul class="list">
-              <li class="item">
-                <label>
-                  <input class="swimmingpool" type="checkbox" name="swimmingpool" id="swimmingpool" checked>Бассейн
-                </label>
-              </li>
-              <li class="item">
-                <label>
-                  <input class="parking" type="checkbox" name="parking" id="parking">Парковка
-                </label>
-              </li>
-              <li class="item">
-                <label>
-                  <input class="wifi" type="checkbox" name="wifi" id="wifi">WiFi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="search-filter-hoteltype">
-            <legend>Тип жилья:</legend>
-            <ul class="list">
-              <li class="item">
-                <label>
-                  <input class="hotel" type="checkbox" name="hotel" id="hotel" checked>Гостиница
-                </label>
-              </li>
-              <li class="item">
-                <label>
-                  <input class="appartaments" type="checkbox" name="appartaments" id="appartaments" checked>Аппартаменты
-                </label>
-              </li>
-              <li class="item">
-                <label>
-                  <input class="motel" type="checkbox" name="motel" id="motel" checked>Мотель
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="search-filter-price">
-            <legend>Стоимость в сутки (Р)</legend>
-            <p class="search-filter-price-output">
-              От <output for="min-price" name="min_price_value">0</output>
-              До <output for="min-price" name="max_price_value">5000</output>
-            </p>
-            <p class="search-filter-price-input">
-              <label class="visually-hidden" for="min_price">Выбор минимальной цены</label>
-              <input type="range" name="min-price" id="min_price" value="0" min="0" max="5000" step="100">
-              <label class="visually-hidden" for="max_price">Выбор максимальной цены</label>
-              <input type="range" name="max-price" id="max_price" value="3000" min="0" max="5000" step="100">
-            </p>
-          </fieldset>
-          <button class="button blue-button button-search-submit" type="submit">Показать</button>
+          <div class="search-filter-container">
+            <div class="search-filter-container-form">
+              <fieldset class="search-filter-infrastructure">
+                <legend>Инфраструктура:</legend>
+                <ul class="list">
+                  <li class="item">
+                    <label>
+                      <input class="swimmingpool" type="checkbox" name="swimmingpool" id="swimmingpool" checked>Бассейн
+                    </label>
+                  </li>
+                  <li class="item">
+                    <label>
+                      <input class="parking" type="checkbox" name="parking" id="parking">Парковка
+                    </label>
+                  </li>
+                  <li class="item">
+                    <label>
+                      <input class="wifi" type="checkbox" name="wifi" id="wifi">WiFi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="search-filter-container-form">
+              <fieldset class="search-filter-hoteltype">
+                <legend>Тип жилья:</legend>
+                <ul class="list">
+                  <li class="item">
+                    <label>
+                      <input class="hotel" type="checkbox" name="hotel" id="hotel" checked>Гостиница
+                    </label>
+                  </li>
+                  <li class="item">
+                    <label>
+                      <input class="appartaments" type="checkbox" name="appartaments" id="appartaments" checked>Аппартаменты
+                    </label>
+                  </li>
+                  <li class="item">
+                    <label>
+                      <input class="motel" type="checkbox" name="motel" id="motel" checked>Мотель
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+          <div class="search-filter-container-buy">
+            <fieldset class="search-filter-price">
+              <legend>Стоимость в сутки (Р)</legend>
+              <p class="search-filter-price-output">
+                От <output for="min-price" name="min_price_value">0</output>
+                До <output for="min-price" name="max_price_value">5000</output>
+              </p>
+              <p class="search-filter-price-input">
+                <label class="visually-hidden" for="min_price">Выбор минимальной цены</label>
+                <input type="range" name="min-price" id="min_price" value="0" min="0" max="5000" step="100">
+                <label class="visually-hidden" for="max_price">Выбор максимальной цены</label>
+                <input type="range" name="max-price" id="max_price" value="3000" min="0" max="5000" step="100">
+              </p>
+            </fieldset>
+            <button class="button blue-button button-search-submit" type="submit">Показать</button>
+          </div>
         </form>
       </section>
       <section class="search-results">

@@ -14,15 +14,19 @@
             <img src="img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
           </a>
         <ul class="site-navigation">
-          <li><a href="information.html">Информация</a></li>
-          <li><a href="photo_and_video.html">Фото и видео</a></li>
-          <li><a href="map_of_state.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <div class="site-navigation-left">
+            <li><a href="information.html">Информация</a></li>
+            <li><a href="photo_and_video.html">Фото и видео</a></li>
+          </div>
+          <div class="site-navigation-right">
+            <li><a href="map_of_state.html">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+        </div>
         </ul>
       </nav>
     </header>
     <main class="main-container">
-      <img src="img/Welcome.png" width="458" height="352" alt="Добро пожаловать в Седону, потому-что Гранд-Коньон - сосёт!">
+      <img class="welcome" src="img/Welcome.png" width="458" height="352" alt="Добро пожаловать в Седону, потому-что Гранд-Коньон - сосёт!">
       <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
       <section class="features">
         <h2 class="visually-hidden">Все преимущества Седоны</h2>
@@ -30,15 +34,19 @@
           <h3>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h3>
           <ul class="places-list">
             <li class="places-item">
-              <h4>Настоящий городок</h4>
-              <p>— №1 —</p>
-              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="places-item-info">
+                <h4>Настоящий городок</h4>
+                <p>— №1 —</p>
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img src="img/village.jpg" width="1600" height="800" alt="Фото города Седона без туристов">
             </li>
             <li class="places-item">
-              <h4>Там есть мост дьявола</h4>
-              <p>— №2 —</p>
-              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <div class="places-item-info">
+                <h4>Там есть мост дьявола</h4>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
               <img src="img/devils-bridge.jpg" width="1600" height="800" alt="Фото моста дьявола">
             </li>
           </ul>
@@ -89,7 +97,9 @@
       </section>
     </main>
     <footer class="main-footer">
-      <p class="main-footer-hashtag">#VISITSEDONA</p>
+      <div class="main-footer-hashtag-container">
+        <p class="main-footer-hashtag">#VISITSEDONA</p>
+      </div>
       <div class="main-footer-social">
         <ul class="social-list">
           <li><a href="#" target="_blank" rel="noopener"><img src="img/twitter.svg" width="17" height="15" alt="Твиттер"></a></li>
@@ -97,10 +107,12 @@
           <li><a href="#" target="_blank" rel="noopener"><img src="img/youtube.svg" width="20" height="16" alt="Ютуб"></a></li>
         </ul>
       </div>
-      <a class="main-footer-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
-        <span lang="en">Website by<span class="visually-hidden"> HTML Academy</span></span>
-        <img src="img/logo-html_academy.png" width="115" height="41" alt="">
-      </a>
+      <div class="main-footer-academy-container">
+        <a class="main-footer-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
+          <span lang="en">Website by<span class="visually-hidden"> HTML Academy</span></span>
+          <img src="img/logo-html_academy.png" width="115" height="41" alt="">
+        </a>
+      </div>
     </footer>
     <section class="modal modal-hotel-search">
       <h2 class="visually-hidden">Параметры поиска гостиницы в Седоне</h2>
