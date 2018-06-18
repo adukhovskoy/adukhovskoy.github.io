@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -123,16 +123,6 @@ a {
   height: 56px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-.site-navigation-left {
-  display: flex;
-}
-
-.site-navigation-right {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .site-navigation li {
@@ -141,6 +131,11 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.site-navigation li:nth-child(3) {
+  margin-left: auto;
+}
+
 .main-container .welcome {
   display: block;
   margin-left: auto;
@@ -270,19 +265,18 @@ a {
 }
 
 .main-footer {
+  box-sizing: border-box;
   min-width: 1200px;
+  min-height: 120px;
   padding-left: 73px;
   padding-right: 73px;
   display:flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-footer-hashtag-container {
-  width: 240px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main-footer-hashtag {
+  margin-left: 61px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -297,7 +291,7 @@ a {
   align-items: center;
 }
 
-.social-list li {
+.social-list a {
   width: 46px;
   height: 48px;
   display: flex;
@@ -321,6 +315,16 @@ a {
   font-weight: 700;
 }
 
+.main-map {
+  width: 1200px;
+  object-fit: cover;
+
+}
+
+.main-map img {
+  object-fit: cover;
+}
+
 .modal-hotel-search-button-submit {
   font: inherit;
   width: 458px;
@@ -341,7 +345,7 @@ a {
 }
 .search-filter-container {
   display: flex;
-  justify-content: flex-start;;
+  justify-content: flex-start;
 }
 
 .search-filter-container-form {
@@ -349,9 +353,9 @@ a {
 }
 
 .search-filter-form fieldset {
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .search-filter-form legend {
