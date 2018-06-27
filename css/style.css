@@ -2,6 +2,7 @@
   display: none;
 }
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   margin-left: auto;
@@ -84,6 +85,10 @@ img {
 .blue-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+}
+
+.modal-hidden {
+  display: none;
 }
 
 .visually-hidden {
@@ -303,6 +308,7 @@ img {
   margin-bottom: 20px;
   max-width: 80%;
   letter-spacing: 0px;
+  color: inherit;
   background-color: inherit;
 }
 
@@ -325,6 +331,7 @@ img {
   min-width: 512px;
   height: 256px;
   object-fit: cover;
+  object-position: 0 -77px;
   flex-grow: 1;
 }
 
@@ -407,23 +414,20 @@ img {
 }
 
 .main-map {
-  height: 473px;
-}
-
-.main-map img {
-  height: 473px;
-  object-fit: cover;
+  height: 593px;
+  background-image: url("../img/map.jpg");
 }
 
 .main-footer {
-/*  padding-left: 73px;
-  padding-right: 73px;*/
+  position: absolute;
+  bottom: 0;
   box-sizing: border-box;
   width: 100%;
   min-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(249, 251, 246, 0.9);
 }
 
 .main-footer-hashtag {
@@ -498,8 +502,8 @@ img {
   margin-bottom: 30px;
 }
 
-.hotel-search-form p:nth-child(1)::after,
-.hotel-search-form p:nth-child(2)::after {
+.hotel-search-form>p:nth-child(1)::after,
+.hotel-search-form>p:nth-child(2)::after {
   content: " ";
   position: absolute;
   right: 9px;
@@ -513,6 +517,7 @@ img {
 
 .modal-hotel-search label {
   display: inline-block;
+  position: relative;
   font-weight: 700;
   width: 100px;
 }
@@ -534,8 +539,44 @@ img {
   justify-content: space-between;
 }
 
+.age-container input {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 6px;
+  padding-left: 17px;
+  width: 114px;
+  text-align: center;
+}
+
+.age-container .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  padding: 0px;
+  width: 38px;
+  height: 38px;
+  font-weight: 700;
+  color: #a9a9a9;
+  background: #f2f2f2;
+  background-image: none;
+}
+
+.age-container .button.decrement-age {
+  top: -0px;
+  right: 76px;
+}
+
+.age-container .children-count-label {
+  box-sizing: border-box;
+  text-align: right;
+  padding-right: 17px;
+}
+
 .modal-hotel-search-button-submit {
   box-sizing: border-box;
+  margin-top: 23px;
   font: inherit;
   width: 458px;
   height: 58px;
